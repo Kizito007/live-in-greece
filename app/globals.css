@@ -1,27 +1,105 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: #f0f7ff;
+  background: #001a33;
+  font-family: "Roboto", sans-serif;
+}
+.building {
+  float: right;
+  width: 90%;
+  height: 90vh;
+}
+.content {
+  position: absolute;
+  margin: 30vh 5%;
+}
+.intro {
+  font-size: 56px;
+  color: #001a33;
+  background: #ffffff7a;
+  border-radius: 30px;
+  padding: 0 15px;
+  width: fit-content;
+}
+.intro-text {
+  background: #001a33cf;
+  width: 65%;
+  margin: 50px 0;
+}
+.citizen {
+  background: #ffb2c7;
+  padding: 16px 24px;
+  border-radius: 16px;
+  color: #001a33;
+}
+.discoveries {
+  margin: 0 5%;
+}
+.discoveries h1 {
+  display: inline-flex;
+  font-size: 34px;
+  margin: 64px 0;
+}
+.opportunities-cover {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.opportunities {
+  background: #ffb2c7;
+  display: flex;
+  padding-top: 50px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 20px;
+  width: 270px;
+  z-index: 1;
+  margin: 0 5px;
+  z-index: 1;
+}
+.opportunities p {
+  position: relative;
+  top: 30px;
+  color: #001a33;
+}
+.opportunities button {
+  position: relative;
+  top: 19px;
+  color: #ffb2c7;
+  background: #001a33;
+  padding: 15px 90px;
+  left: 20px;
+  border-radius: 15px;
+}
+
+@media screen and (max-width: 932px) {
+  .content {
+    margin: 20vh 5%;
+  }
+  .intro {
+    font-size: 44px;
+  }
+  .intro-text {
+    width: 70%;
+    margin: 45px 0;
+  }
+  .opportunities {
+    margin: 20px 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .content {
+    margin: 20vh 5%;
+  }
+  .intro {
+    font-size: 24px;
+  }
+  .intro-text {
+    width: 80%;
+    margin: 25px 0;
+  }
 }
